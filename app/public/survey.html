@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Friend Finder</title>
+
+  <!-- css & js -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+  <!-- chosen -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
+
+</head>
+
+<style>
+.form-group,
+.card {
+    margin: auto;
+}
+
+h3,
+.footer,
+.button {
+    text-align: center;
+}
+</style>
+
+<body>
+
+  <div class="container justify-content-center">
+    <div class="jumbotron">
+      <h1 class="display-4">Survey Questions</h1>
+      <hr class="my-4">
+      <p class="lead">Answer a few basic questions and be matched with your perfect friend!</p>
+    </div>
+
+    <form>
+      <div class="question-container">
+        <h3>
+          <strong class="display-4">About You</strong>
+        </h3>
+        <div class="form-group col-9">
+          <input type="text" class="form-control answered" id="name" placeholder="Your Name">
+        </div>
+        <div class="form-group col-9">
+          <input type="text" class="form-control answered" id="photo" placeholder="Your Photo URL">
+        </div>
+
+        <hr>
+
+        <div class="form-group">
+
+          <div class="card col-9">
+            <h4 class="card-header">Question 1</h4>
+            <div class="card-body">
+              <label class="card-title" for="q1">I forgive late assignments.</label>
+              <select class="form-control chosen-select answered" id="q1">
+                <option value='' disabled selected>Select Answer</option>
+                <option value='1'>Agree</option>
+                <option value='2'>Agree</option>
+                <option value='3'>Agree</option>
+                <option value='4'>Agree</option>
+                <option value='5'>Strongly Agree</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="card col-9">
+            <h4 class="card-header">Question 2</h4>
+            <div class="card-body">
+              <label class="card-title" for="q2">I appreciate the fact that people have differences of opinion, because discussing them helps us grow.</label>
+              <select class="form-control chosen-select answered" id="q2">
+                <option value='' disabled selected>Select Answer</option>
+                <option value='1'>Strongly Disagree</option>
+                <option value='2'>Disagree</option>
+                <option value='3'>Neutral</option>
+                <option value='4'>Agree</option>
+                <option value='5'>Strongly Agree</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="card col-9">
+            <h4 class="card-header">Question 3</h4>
+            <div class="card-body">
+              <label class="card-title" for="q3">I try to be sensitive to the needs of others and anticipate their reactions to my words and actions.
+              </label>
+              <select class="form-control chosen-select answered" id="q3">
+                <option value='' disabled selected>Select Answer</option>
+                <option value='1'>Strongly Disagree</option>
+                <option value='2'>Disagree</option>
+                <option value='3'>Neutral</option>
+                <option value='4'>Agree</option>
+                <option value='5'>Strongly Agree</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="card col-9">
+            <h4 class="card-header">Question 4</h4>
+            <div class="card-body">
+              <label class="card-title" for="q4">I am very close with my family.</label>
+              <select class="form-control chosen-select answered" id="q4">
+                <option value='' disabled selected>Select Answer</option>
+                <option value='1'>Strongly Disagree</option>
+                <option value='2'>Disagree</option>
+                <option value='3'>Neutral</option>
+                <option value='4'>Agree</option>
+                <option value='5'>Strongly Agree</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="card col-9">
+            <h4 class="card-header">Question 5</h4>
+            <div class="card-body">
+              <label class="card-title" for="q5">I value experiences more than things.</label>
+              <select class="form-control chosen-select answered" id="q5">
+                <option value='' disabled selected>Select Answer</option>
+                <option value='1'>Strongly Disagree</option>
+                <option value='2'>Disagree</option>
+                <option value='3'>Neutral</option>
+                <option value='4'>Agree</option>
+                <option value='5'>Strongly Agree</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="card col-9">
+            <h4 class="card-header">Question 6</h4>
+            <div class="card-body">
+              <label class="card-title" for="q6">Cooperation, not competition, brings out the best in people.</label>
+              <select class="form-control chosen-select answered" id="q6">
+                <option value='' disabled selected>Select Answer</option>
+                <option value='1'>Strongly Disagree</option>
+                <option value='2'>Disagree</option>
+                <option value='3'>Neutral</option>
+                <option value='4'>Agree</option>
+                <option value='5'>Strongly Agree</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="card col-9">
+            <h4 class="card-header">Question 7</h4>
+            <div class="card-body">
+              <label class="card-title" for="q7">I'd rather watch a scary movie over a Disney movie.</label>
+              <select class="form-control chosen-select answered" id="q7">
+                <option value='' disabled selected>Select Answer</option>
+                <option value='1'>Strongly Disagree</option>
+                <option value='2'>Disagree</option>
+                <option value='3'>Neutral</option>
+                <option value='4'>Agree</option>
+                <option value='5'>Strongly Agree</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="card col-9">
+            <h4 class="card-header">Question 8</h4>
+            <div class="card-body">
+              <label class="card-title" for="q8">I am quite an exact person, believing that everything should be done properly.</label>
+              <select class="form-control chosen-select answered" id="q8">
+                <option value='' disabled selected>Select Answer</option>
+                <option value='1'>Strongly Disagree</option>
+                <option value='2'>Disagree</option>
+                <option value='3'>Neutral</option>
+                <option value='4'>Agree</option>
+                <option value='5'>Strongly Agree</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="card col-9">
+            <h4 class="card-header">Question 9</h4>
+            <div class="card-body">
+              <label class="card-title" for="q9">Being understanding is more important than being logical.</label>
+              <select class="form-control chosen-select answered" id="q9">
+                <option value='' disabled selected>Select Answer</option>
+                <option value='1'>Strongly Disagree</option>
+                <option value='2'>Disagree</option>
+                <option value='3'>Neutral</option>
+                <option value='4'>Agree</option>
+                <option value='5'>Strongly Agree</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="card col-9">
+            <h4 class="card-header">Question 10</h4>
+            <div class="card-body">
+              <label class="card-title" for="q10">I tend to plan ahead rather than deal with things as they occur.</label>
+              <select class="form-control chosen-select answered" id="q10">
+                <option value='' disabled selected>Select Answer</option>
+                <option value='1'>Strongly Disagree</option>
+                <option value='2'>Disagree</option>
+                <option value='3'>Neutral</option>
+                <option value='4'>Agree</option>
+                <option value='5'>Strongly Agree</option>
+              </select>
+            </div>
+          </div>
+
+          <br>
+
+          <!-- Submit Button -->
+          <div class="button">
+            <button type="submit" class="btn btn-primary btn-lg" id="submit">
+              Submit
+            </button>
+          </div>
+
+    </form>
+
+    </div>
+
+
+    <hr>
+    <footer class="footer">
+      <div class="container">
+        <p>
+          <a href="/api/friends">API Friends List</a> |
+          <a href="https://github.com/afhaque/friendfinder">GitHub Repo</a>
+        </p>
+      </div>
+    </footer>
+
+    </div>
+
+    <!-- results modal -->
+    <div id="results-modal" class="modal fade" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+
+        <!-- modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title">
+              <strong>Your new friend!</strong>
+            </h3>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h5 id="match-name"></h5>
+            <img id="match-img" alt="No picture available">
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <script type="text/javascript">
+
+      // chosen css
+      var config = {
+        ".chosen-select": {},
+        ".chosen-select-deselect": {
+          allow_single_deselect: true
+        },
+        ".chosen-select-no-single": {
+          disable_search_threshold: 10
+        },
+        ".chosen-select-no-results": {
+          no_results_text: "Oops, nothing found!"
+        },
+        ".chosen-select-width": {
+          width: "100%"
+        }
+      };
+
+      for (var selector in config) {
+        $(selector).chosen(config[selector]);
+      }
+
+      // take form inputs
+      $("#submit").on("click", function (event) {
+        event.preventDefault();
+
+        // validation
+        function validate() {
+          var isValid = true;
+          $(".form-control").each(function () {
+            if ($(this).val() === "") {
+              isValid = false;
+            }
+          });
+
+          $(".chosen-select").each(function () {
+
+            if ($(this).val() === "") {
+              isValid = false;
+            }
+          });
+          return isValid;
+        }
+
+        // create an object for user data
+        if (validate()) {
+
+          var userData = {
+            name: $("#name").val(),
+            photo: $("#photo").val(),
+            scores: [
+              $("#q1").val(),
+              $("#q2").val(),
+              $("#q3").val(),
+              $("#q4").val(),
+              $("#q5").val(),
+              $("#q6").val(),
+              $("#q7").val(),
+              $("#q8").val(),
+              $("#q9").val(),
+              $("#q10").val()
+            ]
+          };
+
+          // AJAX post - add survey participant to friends list
+          $.post("/api/friends", userData, function (data) {
+
+            // display best-match info
+            $("#match-name").text(data.name);
+            $("#match-img").attr("src", data.photo);
+
+            // display results modal
+            $("#results-modal").modal("toggle");
+
+          });
+        } else {
+          alert("Please answer all questions before submitting!");
+        }
+      });
+    </script>
+
+</body>
+
+</html>
